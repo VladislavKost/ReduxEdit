@@ -5,6 +5,7 @@ import {
   CLEAR_FORM,
   EDIT_FORM_SERVICE,
   EDIT_SERVICE,
+  CHANGE_FILTER_FIELD,
 } from "../redux/actions/actionTypes.ts";
 
 export function addService(name: string, price: string) {
@@ -24,4 +25,7 @@ export function editFormService(id: string, name: string, price: string) {
 }
 export function clearFormService() {
   return { type: CLEAR_FORM, payload: {} };
+}
+export function filterService(pattern: string) {
+  return { type: CHANGE_FILTER_FIELD, payload: { pattern } };
 }
